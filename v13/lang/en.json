@@ -1,0 +1,69 @@
+{
+  "EAGLELIBRARY": {
+    "compendia": {
+      "title": "Eagle Library",
+      "status": "{present} of {expected} Eagle compendia exist in this world; {missing} are missing.",
+      "conflicts": "These names are taken by compendia of another document type. The Library does not touch them:",
+      "conflictItem": "{name}: {found} instead of {expected}",
+      "create": "Create missing compendia",
+      "notGm": "Only a Gamemaster or Assistant can manage the Eagle compendia.",
+      "readFailed": "The compendia of this world could not be read. The details are in the console.",
+      "done": "Eagle compendia: {created} created, {existed} already existed.",
+      "failed": "Creating the Eagle compendia stopped at {name} ({reason}): {detail} Open the Library again to continue.",
+      "conflictWarning": "{count} compendium names are taken by compendia of another document type; see the console."
+    },
+    "window": {
+      "noEntries": "This compendium has no entries yet.",
+      "noMatches": "No entry matches \"{query}\".",
+      "filter": {
+        "2014": "2014",
+        "2024": "2024",
+        "both": "Both"
+      },
+      "openCopy": "Copy from other compendia…",
+      "searchPlaceholder": "Search this tab by name…"
+    },
+    "copy": {
+      "title": "Copy from other compendia",
+      "selectAll": "Select all",
+      "noPacks": "There are no other compendia in this world.",
+      "preview": "Preview",
+      "start": "Start",
+      "cancel": "Cancel",
+      "showProtocol": "Show protocol",
+      "hideProtocol": "Hide protocol",
+      "clearProtocol": "Clear protocol",
+      "showReport": "Show audit report",
+      "hideReport": "Hide audit report",
+      "force": "Force",
+      "protocolEmpty": "The protocol has no open entries.",
+      "protocolEntry": "{name} ({reason})",
+      "reportIntro": "{count} copy/copies still link to something outside the Library:",
+      "progressCopying": "Copying…",
+      "progressPlanning": "Planning…",
+      "planSummary": "{documents} document(s) across {total} candidate(s) would be copied ({alreadyCopied} already there, {duplicates} duplicate(s)).",
+      "planStopped": "The preview was cancelled; these numbers are only for the part that was checked.",
+      "resultSummary": "{copied} copied, {alreadyCopied} already there, {duplicates} duplicate(s), {failed} failed.",
+      "resultStoppedAborted": "The run was cancelled; the rest of the selection was not attempted.",
+      "resultStoppedFailures": "The run stopped after several failures in a row; the rest of the selection was not attempted.",
+      "confirmTitle": "Copy from {count} compendium(s)? This can take several minutes for a large selection.",
+      "confirmStart": "Start",
+      "confirmCancel": "Cancel",
+      "versionTitle": "Choose the ruleset version",
+      "notify": {
+        "noneSelected": "Choose at least one compendium first.",
+        "readFailed": "The compendia of this world could not be read. The details are in the console.",
+        "protocolReadFailed": "The protocol could not be read: {detail}",
+        "forced": "{name} was copied as a duplicate.",
+        "forceFailed": "Forcing the copy failed ({reason}): {detail}"
+      }
+    },
+    "search": {
+      "keybindingName": "Search the Eagle Library",
+      "keybindingHint": "Opens a search bar over every Eagle compendium of this world.",
+      "placeholder": "Search all Eagle compendia…",
+      "loading": "Reading the Eagle compendia…",
+      "hint": "Type to search all Eagle compendia by name."
+    }
+  }
+}

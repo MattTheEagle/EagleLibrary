@@ -1,0 +1,128 @@
+/* Eagle Library window (milestone M10, reworks 1 and 2). Scoped to this window's own id only (UI guide R-13): no
+   colors, no fonts, only the layout this window needs so its own content can scroll instead of overflowing the
+   world page (Live-Check H, F-M10-1: the tab bar was not reachable past the visible width; F-M10-2: a full tab's
+   list was cut off with no way to reach the rest) and so the three filter buttons sit in a row (Live-Check I,
+   F-M10-3: they stacked one per line without this rule). */
+
+#eagle-library-window .window-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#eagle-library-window .eagle-library-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#eagle-library-window .eagle-library-filter {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  flex: 0 0 auto;
+}
+
+#eagle-library-window .eagle-library-filter button.active {
+  font-weight: bold;
+}
+
+/* Milestone M12: the search field spans the row (a native input defaults to a fixed, narrow size). */
+#eagle-library-window .eagle-library-search {
+  flex: 0 0 auto;
+}
+
+#eagle-library-window .eagle-library-search input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#eagle-library-window nav.tabs {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 0;
+}
+
+#eagle-library-window section.tab {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Copy window (milestone M11): the same column/scroll approach as the Library window above, so a long list of other
+   compendia (or a long protocol/report) scrolls on its own instead of pushing the window or the page. */
+
+#eagle-copy-window .window-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#eagle-copy-window .eagle-copy-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#eagle-copy-window .eagle-copy-selection {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#eagle-copy-window .eagle-copy-packs {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+#eagle-copy-window .eagle-copy-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  flex: 0 0 auto;
+}
+
+#eagle-copy-window .eagle-copy-summary,
+#eagle-copy-window .eagle-copy-protocol,
+#eagle-copy-window .eagle-copy-report {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Search overlay (milestone M13, moved and given a background on the project lead's Live-Check M13 request: top left,
+   aligned with the left tool column and the scene navigation bar, a translucent high-contrast panel instead of no
+   background at all — only the fill is translucent (`rgba` alpha), never the text, via `opacity`, which would fade
+   that too). The result list scrolls on its own past a certain height instead of growing the overlay past the
+   visible area. */
+#eagle-library-search {
+  position: fixed;
+  top: 58px;
+  left: 105px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 0.5em;
+}
+
+#eagle-library-search .eagle-search-root input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#eagle-library-search .eagle-search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+#eagle-library-search .eagle-search-results li.active {
+  font-weight: bold;
+}
