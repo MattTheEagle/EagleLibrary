@@ -3,9 +3,15 @@ import { LIBRARY_ID } from "./index";
 // Eagle Flight Control as the Library sees it: its module id, the API version the Library was written against, and the first
 // Flight Control release that provides that API (contract, sections 5 and 6). Before 1.0.0 the API is tied to its minor
 // version, so a change of Flight Control's API changes REQUIRED_API_VERSION in the same milestone.
+// Raised to 0.13.0/0.7.0 as a compatibility-only patch (version 0.1.1), outside any milestone of this phase: Eagle
+// Homebrew's milestone M2 added the request type `document.create` to Flight Control, which the Library does not use,
+// but which raised the API's minor version — and before 1.0.0 Flight Control accepts a registration only when the
+// requested and the provided minor version are exactly equal (see isApiCompatible in Flight Control's core/api-version.ts).
+// Without this patch the Library would fail to register with any Flight Control from 0.7.0 on. No rule of this
+// contract changed.
 export const FLIGHT_CONTROL_ID = "eagle-flight-control";
-export const REQUIRED_API_VERSION = "0.12.0";
-export const FLIGHT_CONTROL_MIN_MODULE_VERSION = "0.6.0";
+export const REQUIRED_API_VERSION = "0.13.0";
+export const FLIGHT_CONTROL_MIN_MODULE_VERSION = "0.7.0";
 
 // The part of Flight Control's API that registration needs. Flight Control types its parameters as unknown; the Library
 // passes the shape the contract describes.

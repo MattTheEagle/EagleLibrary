@@ -4,7 +4,9 @@ Foundry-VTT-Modul **Eagle Library**: die Single Source of Truth für die Eagle M
 Kopieren aus anderen Compendien mit Einmaligkeit pro Version und Umschreiben aller Verweise, ein Fenster mit Suche und
 Tastenkürzel). Es ist das zweite Modul der Eagle Modules und der erste Verbraucher von Eagle Flight Control.
 
-**Stand:** Version 0.1.0 (Phasenabschluss; `docs/library-convention.md` ist seit dieser Version der Library-Vertrag). Das Modul meldet sich bei Eagle Flight Control an (API `0.12.0`), bekommt dafür einen Tab im Hub;
+**Stand:** Version 0.1.1 (`0.1.0` war der Phasenabschluss und ist weiterhin der Stand von `docs/library-convention.md`,
+dem Library-Vertrag; `0.1.1` ist ein reiner Kompatibilitäts-Patch vom 2026-09-22, ausgelöst durch Eagle Homebrews
+Meilenstein M2 — keine Regel des Vertrags hat sich geändert). Das Modul meldet sich bei Eagle Flight Control an (API `0.13.0`), bekommt dafür einen Tab im Hub;
 der Open-Knopf öffnet das Library-Fenster mit einer Registerkarte je angelegtem Eagle Compendium (Meilenstein M10, Reworks 1 und 2) und einem
 Suchfeld für die aktive Registerkarte (Meilenstein M12), und kann von dort fehlende Compendien anlegen; ein weiterer Knopf öffnet das
 Copy-Fenster (Meilenstein M11): einzelne oder alle Nicht-Eagle-Compendien mit Fortschritt, Abbruch, Protokoll- und Prüfbericht-Ansicht und
@@ -15,7 +17,7 @@ v13. Es gibt keine Lizenz (Hobbyprojekt). Das Repo ist lokal, hat keinen Remote,
 ## Voraussetzungen
 
 - Foundry VTT v13.
-- Eagle Flight Control ab Version `0.6.0` (API `0.12.0`). Das Manifest verlangt es unter `relationships.requires`.
+- Eagle Flight Control ab Version `0.7.0` (API `0.13.0`). Das Manifest verlangt es unter `relationships.requires`.
 
 ## Was das Modul heute tut
 

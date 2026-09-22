@@ -5,7 +5,9 @@ Library module version that last changed it, currently `0.1.0`, and every rule b
 It describes what the code in `core/catalog.ts`, `core/rules-version.ts` and `core/name-key.ts` does; a test
 (`core/library-convention.test.ts`) holds this document against that code. Section 3 lists what is still open, as
 accepted residual risk rather than an unresolved question. Only Foundry v13 and the dnd5e system (tested with 5.3.3) are
-covered. Version 0.1.0 of the Library needs Eagle Flight Control 0.6.0 (API 0.12.0).
+covered. Version 0.1.0 of the Library needed Eagle Flight Control 0.6.0 (API 0.12.0); version 0.1.1 (2026-09-22, a
+compatibility-only patch outside any milestone, triggered by Eagle Homebrew's milestone M2) needs Eagle Flight Control
+0.7.0 (API 0.13.0) instead — no rule below changed.
 
 The Library belongs to one world: its compendia are world compendia, created by the game master, and every world has its
 own. The Library reads compendia directly; every change goes through Eagle Flight Control (project decision Q3 a, N9).

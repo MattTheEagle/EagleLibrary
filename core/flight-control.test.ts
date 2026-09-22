@@ -21,7 +21,7 @@ const FAILURE_CODES = [
 
 const OK_RESULT = {
   ok: true,
-  module: { id: LIBRARY_ID, title: "Eagle Library", version: "0.0.6", apiVersion: "0.12.0" },
+  module: { id: LIBRARY_ID, title: "Eagle Library", version: "0.0.6", apiVersion: "0.13.0" },
 };
 
 function recordingLog() {
@@ -76,7 +76,7 @@ describe("registerWithFlightControl", () => {
     const outcome = registerWithFlightControl(() => apiAnswering(OK_RESULT).api, log);
     expect(outcome).toEqual({ status: "registered", module: OK_RESULT.module });
     expect(lines).toEqual([
-      { level: "info", message: "eagle-library | registerModule result: ok (Eagle Library 0.0.6, API 0.12.0)" },
+      { level: "info", message: "eagle-library | registerModule result: ok (Eagle Library 0.0.6, API 0.13.0)" },
     ]);
   });
 
@@ -157,9 +157,10 @@ describe("registerWithFlightControl", () => {
 
 describe("the version pairing with Flight Control", () => {
   it("asks for the API version that the first Flight Control release with it provides", () => {
-    // Contract, section 6: module version 0.6.0 is the first one with API 0.12.0 (`compendium.flag`).
+    // Contract, section 6: module version 0.7.0 is the first one with API 0.13.0 (`document.create`), a
+    // compatibility-only patch (Library 0.1.1) from Eagle Homebrew's milestone M2; no rule of this contract changed.
     expect(FLIGHT_CONTROL_ID).toBe("eagle-flight-control");
-    expect(REQUIRED_API_VERSION).toBe("0.12.0");
-    expect(FLIGHT_CONTROL_MIN_MODULE_VERSION).toBe("0.6.0");
+    expect(REQUIRED_API_VERSION).toBe("0.13.0");
+    expect(FLIGHT_CONTROL_MIN_MODULE_VERSION).toBe("0.7.0");
   });
 });
