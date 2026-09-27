@@ -1,6 +1,6 @@
 {
   "name": "eagle-library",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "description": "Eagle Library: the single source of truth for the Eagle modules. Early development; for now it only registers with Eagle Flight Control.",

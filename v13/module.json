@@ -2,11 +2,11 @@
   "id": "eagle-library",
   "title": "Eagle Library",
   "description": "Eagle Library: the single source of truth for the Eagle modules. Early development; for now it registers with Eagle Flight Control and creates the Eagle compendia.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "authors": [{ "name": "MattTheEagle" }],
   "compatibility": { "minimum": "13", "verified": "13" },
   "relationships": {
-    "requires": [{ "id": "eagle-flight-control", "type": "module", "compatibility": { "minimum": "0.7.0" } }]
+    "requires": [{ "id": "eagle-flight-control", "type": "module", "compatibility": { "minimum": "0.8.0" } }]
   },
   "esmodules": ["dist/module.js"],
   "styles": ["styles/eagle-library.css"],
